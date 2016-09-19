@@ -1,0 +1,10 @@
+<h1>Index</h1>
+
+
+<ul>
+<% @questions.each do |question|  %>
+  <li><h3><%= question.title %></h3>
+      <h4><%= question.text %></h4>
+            </li>
+<% end %>
+</ul>
