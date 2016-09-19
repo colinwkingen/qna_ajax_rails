@@ -1,0 +1,10 @@
+
+<%= render 'layouts/errors', :object => @answers %>
+
+<%= form_for [@question, @answers], remote: true do |f| %>
+  <div class="form-group">
+    <%= f.label :title %>
+    <%= f.text_field :text %>
+  </div>
+  <p><%= f.submit :class => "btn btn-primary yeehaw" %></p>
+<% end %>
