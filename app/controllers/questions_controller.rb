@@ -17,6 +17,7 @@ class QuestionsController < ApplicationController
  def create
    @question = Question.new(question_params)
    if @question.save
+
      respond_to do |format|
        format.html { redirect_to questions_path(@question) }
        format.js

@@ -1,7 +1,7 @@
 <h1>Index</h1>
 
 
-<ul>
+<ul id="questions">
 <% @questions.each do |question|  %>
   <li><h3><%= link_to question.title, question_path(question) %></h3>
       <h4><%= question.text %></h4>
@@ -9,4 +9,7 @@
 <% end %>
 </ul>
 
-<%= link_to "Add question", new_question_path, :class=> "btn btn-default" %>
+<%= link_to "Add question", new_question_path, id: "new_question_link", :class=> "btn btn-default", remote: true %>
+
+
+<h2 id="test_field">Test Field</h2>

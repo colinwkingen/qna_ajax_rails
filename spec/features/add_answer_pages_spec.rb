@@ -17,4 +17,15 @@ describe 'the answer creation path' do
     click_on "Create Answer"
     expect(page).to have_content('Boo!')
   end
+
+  it 'add an answer to the quesiton', js: true do
+    question = FactoryGirl.create(:question)
+    visit questions_path
+    click_link "A Question"
+    click_link "Add an Answer"
+    click_on "Create Answer"
+    expect(page).to have_content("Title can't be blank")
+    expect(page).to have_content("Text can't be blank")
+  end
+
 end
