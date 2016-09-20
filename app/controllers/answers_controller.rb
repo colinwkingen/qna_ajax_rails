@@ -5,6 +5,7 @@ class AnswersController < ApplicationController
   end
 
   def show
+
   end
 
   def new
@@ -54,6 +55,6 @@ class AnswersController < ApplicationController
 
   private
   def answer_params
-    params.require(:answer).permit(:title, :text)
+    params.require(:answer).permit(:title, :text, :question_id)
   end
 end
