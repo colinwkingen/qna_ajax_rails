@@ -15,6 +15,5 @@ describe 'the question creation path' do
     fill_in "Text", with: "Okay then"
     click_on "Create Question"
     expect(page).to have_content('Index')
-
   end
 end

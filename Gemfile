@@ -19,6 +19,7 @@ group :development, :test do
   gem 'poltergeist'
   gem 'simplecov', require: false
   gem 'database_cleaner'
+  gem 'factory_girl_rails'
 end
 
 group :development do
