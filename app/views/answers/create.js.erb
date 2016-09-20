@@ -1,1 +1,4 @@
-$('#question').append('<li><%= @question.title %> | <%= question.text %></li>')
+$('form').remove();
+$('#new_answer_link').show();
+$('ul p').remove();
+$('#question_answers').append('<li><%= @answer.title %></li>')

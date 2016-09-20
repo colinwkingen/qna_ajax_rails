@@ -11,11 +11,13 @@ class AnswersController < ApplicationController
   def new
     @question = Question.find(params[:question_id])
     @answer = @question.answers.new
+    @answer.question_id = @question.id
   end
 
   def create
     @question = Question.find(params[:question_id])
     @answer = @question.answers.new(answer_params)
+
     if @answer.save
       flash[:notice] = "Answer successfully added!"
       respond_to do |format|
