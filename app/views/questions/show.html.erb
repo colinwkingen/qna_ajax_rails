@@ -10,4 +10,6 @@
   <% end %>
 </ul>
 
-<p><%= link_to "Add an Answer", new_question_answer_path(@question), id: "new_answer_link", class: "btn btn-default", remote: true %></p>
+<p><%= link_to "Add an Answer", new_question_answer_path(@question), id: "new_answer_link", class: "btn btn-default", remote: true %></p> |
+<p><%= link_to 'Delete', question_path(@question),:data => {:confirm => "You sure?", :method => 'delete'} %></p> |
+<p><%= link_to 'Edit', edit_question_path(@question), id: "edit_question_link", class: "btn btn-default", remote: true %></p>

@@ -1,4 +1,5 @@
 $('form').remove();
-$('#new_question_link').show();
+$('#edit_question_link').show();
 $('ul p').remove();
 $('#questions').append('<li><%= link_to @question.title, question_path(@question) %><br><%= @question.text %><h3>Boo!</h3></li>')
+$('#questions').append('<p><%= link_to "Back", questions_path  %></p>')

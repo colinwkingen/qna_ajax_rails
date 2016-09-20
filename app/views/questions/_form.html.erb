@@ -1,5 +1,5 @@
 <%= render 'layouts/errors', :object => @question %>
-<div id="new_answer_form">
+<div id="question_form">
 <%= form_for [@question], remote: true do |f| %>
   <div class="form-group">
     <%= f.label :title %>

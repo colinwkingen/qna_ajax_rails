@@ -1,4 +1,5 @@
 FactoryGirl.define do
+
   factory(:question) do
     title('A Question')
     text('What is the meaning of life')
@@ -7,5 +8,7 @@ FactoryGirl.define do
   factory(:answer) do
     title('The meaning of life')
     text('Its all about the journey, man.')
+    question
   end
+
 end

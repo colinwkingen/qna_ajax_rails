@@ -19,7 +19,7 @@ class QuestionsController < ApplicationController
    if @question.save
 
      respond_to do |format|
-       format.html { redirect_to questions_path(@question) }
+       format.html { redirect_to root_path }
        format.js
      end
    else
@@ -35,11 +35,18 @@ class QuestionsController < ApplicationController
  def update
    @question= Question.find(params[:id])
    if @question.update(question_params)
-     redirect_to questions_path
+     respond_to do |format|
+       format.html { redirect_to questions_path }
+       format.js
+     end
    else
      render :edit
    end
  end
+
+
+
+
 
  def destroy
    @question = Question.find(params[:id])
